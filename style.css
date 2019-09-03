@@ -396,7 +396,8 @@ select,
 optgroup,
 textarea {
 	color: #404040;
-	font-family: sans-serif;
+	/*font-family: sans-serif;*/
+	font-family: 'Open Sans', sans-serif !important;
 	font-size: 16px;
 	font-size: 1rem;
 	line-height: 1.5;
@@ -838,7 +839,7 @@ a:hover, a:active {
 /*--------------------------------------------------------------
 ## Posts and pages
 --------------------------------------------------------------*/
-.sticky {
+/*.sticky {
 	display: block;
 }
 
@@ -860,7 +861,7 @@ a:hover, a:active {
 .page-links {
 	clear: both;
 	margin: 0 0 1.5em;
-}
+}*/
 
 /*--------------------------------------------------------------
 ## Comments
@@ -986,26 +987,13 @@ object {
 
 
 /************************** My Styles *************************/
-* {
-  margin: 0;
-  padding: 0;
-}
-html,
+/*--------------------------------------------------------------
+## Sticky footer styles
+--------------------------------------------------------------*/
 body {
-  height: 100%;
+  overflow-x: hidden;
+  font-family: 'Open Sans', sans-serif;
 }
-.wrapper {
-  display: flex;
-  flex-direction: column;
-  min-height: 100%;
-}
-.content {
-  flex: 1 0 auto;
-}
-.footer {
-  flex: 0 0 auto;
-}
-
 
 /*--------------------------------------------------------------
 ## Social Header
@@ -1051,7 +1039,7 @@ body {
 	position: absolute; 
 	width: 0; 
 	height: 0; 
-	left: 168px; 
+	left: 172px; 
 	top: -23px; 
 	border: 12px solid; 
 	border-color: transparent transparent #2a353c; 
@@ -1090,9 +1078,13 @@ body {
 	top: 10%;
 }
 
+.slide-img {
+	max-height: 100%;
+}
+
 .natural-power {
 	font-size: 70px;
-    font-weight: 600;
+    font-weight: 800;
     text-transform: uppercase;
     margin-top: 50px;
     text-shadow: 0 0 20px #333;
@@ -1171,8 +1163,311 @@ body {
 }
 
 /*--------------------------------------------------------------
+## Call To Action
+--------------------------------------------------------------*/
+/* Check Details */
+.call-action {
+	background-color: #fcfcfc;
+	border-bottom: 1px solid #eee;
+}
+
+.call-action h3,
+.call-action span {
+	padding: 40px 0;
+	font-weight: 300;
+    letter-spacing: -1px;
+}
+
+.primary-txt {
+	color: #3f8cd1;
+}
+
+.btn-primary {
+	background-color: #3f8cd1 !important;
+	border-color: #3f8cd1 !important;
+}
+
+.btn-secondary {
+	background-color: #67727d !important;
+	border-color: #67727d !important;
+}
+
+.btn-info {
+	background-color: #2a353c !important;
+	border-color: #2a353c !important;
+}
+
+.btn {
+	border-radius: 0 !important;
+	padding: .75rem 1rem !important;
+}
+
+/*--------------------------------------------------------------
+## Recent Posts
+--------------------------------------------------------------*/
+.p-recent {
+	padding-bottom: 15px;
+}
+
+.p-recent .p-block-wrap > div:nth-child(4n+4) {
+	margin-bottom: 45px;
+}
+
+.p-recent h5 {
+	margin-top: 50px;
+	margin-bottom: 25px;
+}
+
+.p-recent .fa {
+	color: #8b969e;
+}
+
+.p-block {
+	margin-bottom: 12px;
+}
+
+.p-date {
+	margin-top: -14px;
+	min-width: 60px;	
+	padding-right: 7px;
+}
+
+.p-date-day {
+	color: #3f8cd1;
+	font-size: 36px;
+	font-weight: 300;
+	text-align: center;
+}
+
+.p-date-my {
+	font-size: 10px;
+	margin-bottom: 10px;
+	text-transform: uppercase;
+}
+
+.p-img {
+	margin-right: 25px;
+}
+
+.p-auth {
+	font-size: 9px;
+	font-weight: 600;
+	border-bottom: 1px solid #e8eaec;
+	padding-bottom: 15px;
+	text-transform: uppercase;
+}
+
+.fa.fa-square {
+	font-size: 3px;
+	margin: auto 5px;
+	vertical-align: middle;
+}
+
+.p-excerpt {
+	font-size: 12px;
+	font-weight: 300;
+}
+
+/*--------------------------------------------------------------
+## Our Team
+--------------------------------------------------------------*/
+.our-team {
+	background: url(images/1600x549.png) no-repeat;
+	-webkit-background-size: cover;
+	background-size: cover;
+	color: #fff;
+}
+
+.our-team h3 {
+	color: #f3f3f3;
+	font-weight: 300;
+	margin: 40px auto;
+	text-align: center;
+}
+
+.our-team .card {
+	background: transparent;
+}
+
+.our-team .card-body .card-title {
+	margin-bottom: 0;
+}
+
+.our-team .position {
+	color: #3f8cd1;
+	font-size: smaller;
+}
+
+.our-team .card-text p {
+	color: #95a4ae;
+	font-size: smaller;
+	text-align: center;
+}
+
+.block-socials {
+	padding: 0;
+	margin: 0;
+}
+
+.team-socials {
+	margin: 0;
+	padding-left: 0;
+}
+
+.team-socials .socials-item {
+	list-style: none;
+}
+
+.team-socials .socials-item .socials-link {
+	color: #95a4ae;
+}
+
+.team-socials .socials-item .socials-link:hover {
+	color: #ccc;
+} 
+
+.socials-link .fa,
+.socials-link .fab {
+	margin-left: 0;
+	margin-right: 10px;
+}
+
+/*--------------------------------------------------------------
+## Our Clients
+--------------------------------------------------------------*/
+.our-clients {
+	padding: 20px auto;
+}
+
+.our-clients .img-wrap {
+	width: 180px;
+	height: 111px;	
+}
+
+/*--------------------------------------------------------------
+## Get In Touch
+--------------------------------------------------------------*/
+.get-in-touch {
+	background: url(images/1600x442.png) no-repeat;
+	-webkit-background-size: cover;
+	background-size: cover;
+}
+
+.get-in-touch .form-wrap .wpcf7 {
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	justify-content: center;
+}
+
+.get-in-touch .form-group {
+	margin-bottom: 10px;
+}
+
+.get-in-touch h3 {
+	color: #f3f3f3;
+	font-weight: 300;
+	margin: 40px auto;
+	text-align: center;
+}
+
+.get-in-touch form {
+	width: 50%;
+}
+
+.get-in-touch form input,
+.get-in-touch form textarea {
+	background-color: #c1c6ca;
+	border: 1px solid #9aa1a9;
+	border-radius: 0;
+}
+
+.get-in-touch form input {
+	padding: 20px;
+}
+
+.get-in-touch form textarea {
+	padding-left: 20px;
+}
+
+.get-in-touch form input::placeholder,
+.get-in-touch form textarea::placeholder {
+	color: #333;
+	font-size: 15px;
+}
+
+.get-in-touch form #InputName {
+	background-image: url(http://test2.local/wp-content/themes/ogl/images/i_user.png);
+	background-repeat: no-repeat;
+	background-position: 97% 11px;
+}
+
+.get-in-touch form #InputEmail {
+	background-image: url(http://test2.local/wp-content/themes/ogl/images/i_envelop.png);
+	background-repeat: no-repeat;
+	background-position: 97% 15px;
+}
+
+.get-in-touch .btn-group {
+	margin-top: 30px;
+}
+
+.get-in-touch .btn-group button {
+	font-size: small;
+	text-transform: uppercase;
+}
+
+/*--------------------------------------------------------------
 ## Footer
 --------------------------------------------------------------*/
+.pre-footer {
+	background-color: #21282e;
+	color: #98d4fc;
+	font-size: 12px;
+	padding-top: 100px;
+	padding-bottom: 40px;
+}
+
+.pre-footer .footer-logo {
+	margin-bottom: 25px;
+}
+
+.pre-footer .logo-text {
+	margin-left: 20px;
+    font-size: 20px;
+    vertical-align: bottom;
+    letter-spacing: 5px;
+}
+
+.pre-footer h5 {
+	font-size: medium;
+	margin-top: 22px;
+	margin-bottom: 32px;
+}
+
+.pre-footer .p-footer-block {
+	margin-bottom: 25px;
+}
+
+.pre-footer .post-link {
+	color: #fff;
+    font-style: italic;
+}
+
+.pre-footer .i_footer {
+	margin-right: 0;
+}
+
+.footer-phone, .footer-email {
+	color: #98d4fc;
+}
+
+.footer {
+	background-color: #1c2227;
+}
+
 .copyright {
 	color: #98d4fc;
 	font-size: x-small;
@@ -1203,9 +1498,16 @@ No media query for `xs` since this is the default in Bootstrap*/
 
 /* Medium devices (tablets, less than 992px)*/
 @media (max-width: 991.98px) {
+	.socials .navbar-nav {
+		display: flex;
+		flex-direction: row;
+	}
 	.socials .fa, .socials .fab {
 		margin-left: 10px;
     	margin-right: 10px;
+	}
+	.get-in-touch form {
+	    width: 100%;
 	}
 }
 
